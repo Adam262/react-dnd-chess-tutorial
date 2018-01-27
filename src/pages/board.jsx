@@ -2,14 +2,14 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import Board from '../components/chess/board';
-import { observe } from '../components/chess/game';
+import { observe, knightPosition } from '../components/chess/game';
 
 export default class BoardContainer extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      knightPosition: [0, 0]
+      knightPosition: knightPosition
     }
   }
 
