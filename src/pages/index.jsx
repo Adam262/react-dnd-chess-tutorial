@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 import Board from '../chess/board';
 import { observe, knightPosition } from '../chess/game';
@@ -22,6 +21,9 @@ export default class BoardContainer extends React.Component {
     return (
       <div>
         <h1>Chess</h1>
+        <p> Based on the official React DnD
+          <a href={ "http://react-dnd.github.io/react-dnd/docs-tutorial.html"} target="_blank"> tutorial</a> 
+        </p>
         <Board knightPosition={this.state.knightPosition} />
       </div>
     );
