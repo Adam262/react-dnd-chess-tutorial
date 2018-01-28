@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import Board from '../components/chess/board';
-import { observe, knightPosition } from '../components/chess/game';
+import Board from '../chess/board';
+import { observe, knightPosition } from '../chess/game';
 
 export default class BoardContainer extends React.Component {
   constructor(props) {
@@ -14,9 +14,8 @@ export default class BoardContainer extends React.Component {
   }
 
   componentDidMount() {
-    observe(
-      (newPosition) => this.setState({knightPosition: newPosition})
-    )
+    const callback = newPosition => this.setState({knightPosition: newPosition});
+    observe(callback);
   }
 
   render() {    

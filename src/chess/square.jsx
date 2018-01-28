@@ -5,8 +5,9 @@ import styled from 'styled-components';
 const StyledDiv = styled.div`
   background-color: ${ props => props.black ? 'black' : 'white' };
   color: ${ props => props.black ? 'white' : 'black' };
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
